@@ -25,7 +25,7 @@ void appInit()
         Serial.println("BMP280 NOT found");
     }
 
-    // Stop here if the screen buffer could not be created
+    // Stop if screen buffer = !
     if (!displayInit())
     {
         Serial.println("ERROR: not enough memory for the screen buffer");
@@ -56,6 +56,6 @@ void appUpdate()
 
     uiUpdate(event, newData);
 
-    // Send the finished picture to the screen (only if something changed)
+    //Update display if changed
     displayUpdate();
 }
