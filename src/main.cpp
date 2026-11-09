@@ -25,27 +25,16 @@ void appInit()
         Serial.println("BMP280 NOT found");
     }
 
-    // Stop if screen buffer = !
-    if (!displayInit())
-    {
-        Serial.println("ERROR: not enough memory for the screen buffer");
-        while (true)
-        {
-            delay(1000);
-        }
-    }
-
+    displayInit();
     joystickInit();
 
     if (!sensorFound)
     {
         displayShowMessage("BMP280 not found", "Check I2C wiring (SDA = GPIO8, SCL = GPIO9)");
-        displayUpdate();
         delay(2000);
     }
 
     uiInit();
-    displayUpdate();
     Serial.println("Ready");
 }
 
@@ -55,7 +44,4 @@ void appUpdate()
     JoyEvent event = joystickRead();
 
     uiUpdate(event, newData);
-
-    //Update display if changed
-    displayUpdate();
 }
