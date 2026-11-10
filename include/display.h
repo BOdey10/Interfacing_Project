@@ -1,8 +1,7 @@
 // display.h - drawing functions for the ST7789 TFT screen
 //
-// All drawing is done into a memory buffer (a hidden copy of the screen).
-// Nothing appears on the TFT until displayUpdate() sends the finished
-// picture to the screen in one go. This stops flickering.
+// All drawing is done into a memory buffer .
+// Nothing appears on the TFT until displayUpdate() sends the finished picture to the screen in one go. This stops flickering.
 
 #ifndef DISPLAY_H
 #define DISPLAY_H

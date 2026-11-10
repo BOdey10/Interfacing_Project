@@ -16,8 +16,7 @@
 #define TFT_WIDTH           240     // native panel size
 #define TFT_HEIGHT          320
 #define TFT_ROTATION        1       // 1 = landscape
-#define TFT_SPI_MODE        SPI_MODE0   // try SPI_MODE3 if the screen stays blank
-
+#define TFT_SPI_MODE        SPI_MODE0   
 #define SCREEN_W            320     // size after rotation
 #define SCREEN_H            240
 

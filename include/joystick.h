@@ -1,4 +1,4 @@
-// joystick.h - KY023 joystick (two analog axes + push button)
+// joystick.h - KY023 joystick 
 
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
@@ -19,7 +19,6 @@ typedef enum
 // Set up the button pin and the ADC
 void joystickInit();
 
-// Check the joystick. Does not wait, so call it every loop.
 // Returns JOY_NONE if nothing happened.
 JoyEvent joystickRead();
 

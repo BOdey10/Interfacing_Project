@@ -13,7 +13,6 @@ bool sensorInit()
 {
     Wire.begin(PIN_I2C_SDA, PIN_I2C_SCL);
 
-    // The address depends on how the SDO pin is wired, so try both
     if (!bmp.begin(BMP280_ADDRESS_1) && !bmp.begin(BMP280_ADDRESS_2))
     {
         return false;

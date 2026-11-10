@@ -28,7 +28,7 @@ static void drawMenuRow(int row)
 static void drawMenu()
 {
     displayClear();
-    displayDrawTitle("WEATHER STATION");
+    displayDrawTitle("Bills WEATHER STATION");
 
     for (int i = 0; i < PAGE_COUNT; i++)
     {
